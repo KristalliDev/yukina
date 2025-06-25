@@ -1,0 +1,61 @@
+---
+import "../styles/animations.css";
+import "../styles/scrollbar.css";
+import "../styles/transitions.css";
+import "../styles/searchbar.css";
+import "overlayscrollbars/overlayscrollbars.css";
+---
+
+<style is:global>
+/* Kanit, Pacifico */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&display=swap');
+
+  :root {
+    --hue: 300;
+
+    --primary-color: #7FB3D5;
+    --primary-color-lighten: #EAF2F8;
+    --primary-color-hover: oklch(90% 0.025 var(--hue));
+    --primary-color-transparent: oklch(70% 0.15 var(--hue) / 15%);
+    --text-color: black;
+    --text-color-lighten: oklch(50% 0 0);
+    --card-color: oklch(100% 0 0);
+    --card-color-transparent: oklch(100% 0 0 / 85%);
+    --background-color: #D4E6F1;
+
+    --brand-font: "Pacifico", sans-serif;
+    --primary-font: "Noto Sans SC", sans-serif;
+    --code-font: "JetBrains Mono", "Fira Code", monospace;
+
+    --page-width-lg: 992px;
+    --page-width-xl: 1264px;
+
+    --banner-height: 55vh;
+    --title-font: var(--brand-font);
+    --text-color: black;
+    --subtitle-font: monospace;
+    --subtitle-color: black;
+
+    --onload-animation-delay: 100ms;
+    --onload-animation-interval: 100ms;
+  }
+
+  :root.dark {
+    --primary-color: #A9CCE3;
+    --primary-color-lighten: oklch(40% 0.04 var(--hue));
+    --primary-color-hover: oklch(20% 0.015 var(--hue));
+    --text-color: white;
+    --text-color-lighten: oklch(90% 0.002 var(--hue));
+    --title-color: white;
+    --card-color: oklch(25% 0.02 var(--hue));
+    --card-color-lighten: oklch(40% 0.04 var(--hue));
+    --card-color-transparent: oklch(30% 0.025 var(--hue) / 85%);
+    --background-color: oklch(17.5% 0.015 var(--hue));
+    --subtitle-color: white;
+  }
+
+  .swup-progress-bar {
+    height: 5px;
+    background-color: var(--primary-color);
+  }
+</style>

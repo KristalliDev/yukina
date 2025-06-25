@@ -1,0 +1,2 @@
+src/content/posts is where you will make *.md files, they must end with .md for it to work.
+Name the actual file what you want, the thing that shows up is the "title" inside not the filename.
