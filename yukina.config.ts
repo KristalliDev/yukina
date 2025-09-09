@@ -29,7 +29,7 @@ const YukinaConfig: Configuration = {
   socialLinks: [
     {
       icon: "mingcute:instagram-line",
-      link: "https:/rickroll.com",
+      link: "https://rickroll.com",
     },
   ],
   maxSidebarCategoryChip: 6, // It is recommended to set it to a common multiple of 2 and 3
