@@ -8,7 +8,7 @@ const YukinaConfig: Configuration = {
 
   description: "Test",
 
-  site: "https://aaaaaaaaa.vercel.app",
+  site: "https://bibhutiupadhyay.vercel.app",
 
   locale: "en", // set for website language and date format
 
@@ -21,14 +21,10 @@ const YukinaConfig: Configuration = {
       nameKey: I18nKeys.nav_bar_about,
       href: "/about",
     },
-    // {
-    //   nameKey: I18nKeys.nav_bar_notes,
-    //   href: "/notes",
-    // },
   ],
 
-  username: "",
-  sign: "",
+  username: "Bibhuti Upadhyay",
+  sign: "<3",
   avatarUrl: "https://i.imgur.com/lRzMHXI.gif",
   socialLinks: [
     {
