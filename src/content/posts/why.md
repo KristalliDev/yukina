@@ -2,7 +2,7 @@
 title: Why I cry now
 published: 2025-09-09
 description: sobing
-category: Creative Writing
+category: Life
 draft: false
 ---
 
