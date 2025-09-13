@@ -1,6 +1,7 @@
 {
   "short_name": "Blog",
   "name": "Bibhuti's Blog",
+  "lang": "en",
   "icons": [
     {
       "src": "/favicon.png",
@@ -9,6 +10,7 @@
     }
   ],
   "start_url": ".",
+  "orientation": "any",
   "display": "standalone",
   "theme_color": "#aac9e0",
   "background_color": "#d8e4f4"
