@@ -19,10 +19,12 @@ export const en: Translation = {
   [key.side_bar_view_more]: "View More",
 
   [key.archive_year_title_count]: "Total {{}} article(s)",
+  [key.notes_year_title_count]: "Total {{}} note(s)",
 
   [key.pages_categories_archive]: "Article Archive",
   [key.pages_tags_archive]: "Tag Archive",
   [key.pages_archive_archive]: "Archive",
+  [key.pages_notes_archive]: "Notes",
 
   [key.pages_tags_title]: "Tags",
   [key.pages_categories_title]: "Categories",

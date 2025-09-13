@@ -6,7 +6,7 @@ const YukinaConfig: Configuration = {
   subTitle: "I am Bibhuti",
   brandTitle: "Home",
 
-  description: "Test",
+  description: "A simple blog",
 
   site: "https://bibhutiupadhyay.vercel.app",
 
@@ -20,6 +20,10 @@ const YukinaConfig: Configuration = {
     {
       nameKey: I18nKeys.nav_bar_about,
       href: "/about",
+    },
+    {
+      nameKey: I18nKeys.nav_bar_notes,
+      href: "/notes",
     },
   ],
 

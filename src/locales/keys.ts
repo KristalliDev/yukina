@@ -16,9 +16,11 @@ enum I18nKeys {
   side_bar_view_more = "side_bar_view_more",
 
   archive_year_title_count = "archive_year_title_count",
+  notes_year_title_count = "notes_year_title_count",
 
   pages_categories_archive = "pages_categories_archive",
   pages_archive_archive = "pages_archive_archive",
+  pages_notes_archive = "pages_notes_archive",
   pages_tags_archive = "pages_tags_archive",
 
   pages_tags_title = "pages_tags_title",

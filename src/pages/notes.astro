@@ -1,0 +1,10 @@
+---
+import NotesLayout from "../layouts/NotesLayout.astro";
+import I18nKeys from "../locales/keys";
+import { i18n } from "../locales/translation";
+import { GetNotes } from "../utils/notes";
+
+const notesMap = await GetNotes();
+---
+
+<NotesLayout notesMap={notesMap} title={i18n(I18nKeys.pages_notes_archive)} />

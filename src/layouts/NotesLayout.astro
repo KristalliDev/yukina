@@ -1,0 +1,48 @@
+---
+// Component Imports
+import Main from "../layouts/MainLayout.astro";
+import NotesYearTitle from "../components/misc/NotesYearTitle.astro";
+import ArchivePost from "../components/misc/NotesPost.astro";
+
+import { type Notes } from "../utils/notes";
+
+export interface Props {
+  notesMap: Map<number, Array<Notes>>;
+  title?: string;
+  subTitle?: string;
+  slug?: string;
+}
+
+const { notesMap, title, subTitle, slug } = Astro.props;
+---
+
+<Main title={title} subTitle={subTitle} slug={slug}>
+  <div class="notes">
+    {
+      notesMap.size !== 0 &&
+        [...notesMap.keys()].map((year) => (
+          <div>
+            <NotesYearTitle year={year} count={notesMap.get(year)!.length} />
+            <ul>
+              {notesMap.get(year)?.map((entry) => (
+                <li>
+                  <ArchivePost
+                    id={entry.id}
+                    title={entry.title}
+                    pubilished={entry.date}
+                    tags={entry.tags}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+    }
+  </div>
+</Main>
+
+<style>
+  .notes {
+    @apply mx-3 flex flex-col rounded-2xl bg-[var(--card-color)] px-10 py-5 lg:mx-0 lg:p-10;
+  }
+</style>

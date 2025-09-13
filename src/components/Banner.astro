@@ -1,6 +1,6 @@
 ---
 import YukinaConfig from "../../yukina.config";
-import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
+// import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
 
 export interface Props {
   title?: string;
@@ -11,7 +11,7 @@ export interface Props {
 const { title, subTitle, bannerImage, slug } = Astro.props;
 
 const hasTitle = title !== undefined || subTitle !== undefined;
-const hasHeaderImg = bannerImage !== undefined || slug !== undefined;
+// const hasHeaderImg = bannerImage !== undefined || slug !== undefined;
 
 let carouselImgsList = YukinaConfig.banners;
 const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
@@ -62,12 +62,12 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
     </div>
   </div>
 
-<script>
-  const styleElement = document.createElement("style");
-  const carouselImgs = document.getElementById("carousel_imgs");
-  const carouselImgsCount = carouselImgs?.children.length ?? 0;
+  <script>
+    const styleElement = document.createElement("style");
+    const carouselImgs = document.getElementById("carousel_imgs");
+    const carouselImgsCount = carouselImgs?.children.length ?? 0;
 
-  const carouselAnimation = `
+    const carouselAnimation = `
   @keyframes carousel-animation {
     0% {
       opacity: 0;
@@ -93,63 +93,64 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
     }
   }
   `;
-  styleElement.textContent = carouselAnimation;
-  let bannerElement = document.getElementById("banner");
-  if (bannerElement && !bannerElement.querySelector("style"))
-    bannerElement.appendChild(styleElement);
-</script>
+    styleElement.textContent = carouselAnimation;
+    let bannerElement = document.getElementById("banner");
+    if (bannerElement && !bannerElement.querySelector("style"))
+      bannerElement.appendChild(styleElement);
+  </script>
 
-<style define:vars={{ carouselAnimationTime }}>
-  .banner {
-    @apply relative h-[calc(var(--banner-height)*3/4)] opacity-100 lg:h-[var(--banner-height)];
-  }
+  <style define:vars={{ carouselAnimationTime }}>
+    .banner {
+      @apply relative h-[calc(var(--banner-height)*3/4)] opacity-100 lg:h-[var(--banner-height)];
+    }
 
-  .carousel {
-    @apply absolute left-0 top-0 -z-10 block h-[calc(var(--banner-height)*3/4)] w-full overflow-hidden bg-white lg:h-[var(--banner-height)];
-    animation-fill-mode: forwards;
-  }
+    .carousel {
+      @apply absolute left-0 top-0 -z-10 block h-[calc(var(--banner-height)*3/4)] w-full overflow-hidden bg-white lg:h-[var(--banner-height)];
+      animation-fill-mode: forwards;
+    }
 
-  .carousel::before {
-    @apply absolute left-0 top-0 z-10 block h-full w-full bg-black/25 transition-all content-[''];
-    @apply dark:bg-black/30;
-  }
+    .carousel::before {
+      @apply absolute left-0 top-0 z-10 block h-full w-full bg-black/25 transition-all content-[''];
+      @apply dark:bg-black/30;
+    }
 
-  .carousel .item {
-    @apply absolute left-0 top-0 z-0 h-full w-full origin-center bg-cover bg-center bg-no-repeat opacity-0;
-    animation: carousel-animation var(--carouselAnimationTime) linear infinite
-      0s;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-  }
+    .carousel .item {
+      @apply absolute left-0 top-0 z-0 h-full w-full origin-center bg-cover bg-center bg-no-repeat opacity-0;
+      animation: carousel-animation var(--carouselAnimationTime) linear infinite
+        0s;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
 
-  .cover {
-    @apply absolute left-0 top-0 z-0 block h-[var(--banner-height)] w-full overflow-hidden bg-white;
-  }
+    .cover {
+      @apply absolute left-0 top-0 z-0 block h-[var(--banner-height)] w-full overflow-hidden bg-white;
+    }
 
-  .cover::before {
-    @apply absolute left-0 top-0 z-10 block h-full w-full bg-black/25 transition-all content-[''];
-    @apply dark:bg-black/30;
-  }
+    .cover::before {
+      @apply absolute left-0 top-0 z-10 block h-full w-full bg-black/25 transition-all content-[''];
+      @apply dark:bg-black/30;
+    }
 
-  .cover .item {
-    @apply h-full w-full object-cover;
-  }
+    .cover .item {
+      @apply h-full w-full object-cover;
+    }
 
-  .title {
-    @apply mt-8 text-center font-bold text-[var(--title-color)] drop-shadow-lg lg:mt-1;
-    font-family: var(--title-font);
-  }
+    .title {
+      @apply mt-8 text-center font-bold text-[var(--title-color)] drop-shadow-lg lg:mt-1;
+      font-family: var(--title-font);
+    }
 
-  .title-index {
-    @apply mb-0 text-6xl leading-[5rem] lg:mb-1 lg:text-8xl;
-  }
+    .title-index {
+      @apply mb-0 text-6xl leading-[5rem] lg:mb-1 lg:text-8xl;
+    }
 
-  .title-normal {
-    @apply mb-1 text-3xl lg:text-5xl;
-  }
+    .title-normal {
+      @apply mb-1 text-3xl lg:text-5xl;
+    }
 
-  .subtitle {
-    @apply text-center text-xl text-[var(--subtitle-color)] drop-shadow-md lg:text-3xl;
-    font-family: var(--subtitle-font);
-  }
-</style>
+    .subtitle {
+      @apply text-center text-xl text-[var(--subtitle-color)] drop-shadow-md lg:text-3xl;
+      font-family: var(--subtitle-font);
+    }
+  </style>
+</div>
